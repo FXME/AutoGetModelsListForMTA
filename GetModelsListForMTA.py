@@ -154,7 +154,7 @@ class IDEProcessorApp:
             cmodel_path = os.path.join(output_dir, "CModelNames.txt")
             with open(cmodel_path, "w", encoding='utf-8') as f:
                 for obj_id, obj_name in sorted_objects:
-                    f.write(f'"{obj_id},\n{obj_name}",\n')
+                    f.write(f'{obj_id},\n"{obj_name}",\n')
             self.created_files.append(cmodel_path)
 
             # objects.xml

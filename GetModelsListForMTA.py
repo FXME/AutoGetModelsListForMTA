@@ -8,7 +8,7 @@ from tkinter import ttk, filedialog, messagebox
 class IDEProcessorApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("IDE Files Processor | by e1ectr0venik | v1.0")
+        self.root.title("IDE Files Processor | by e1ectr0venik | v1.1")
         self.root.geometry("600x400")
         self.root.resizable(False, False)
         
@@ -154,7 +154,7 @@ class IDEProcessorApp:
             cmodel_path = os.path.join(output_dir, "CModelNames.txt")
             with open(cmodel_path, "w", encoding='utf-8') as f:
                 for obj_id, obj_name in sorted_objects:
-                    f.write(f'"{obj_name}", {obj_id},\n')
+                    f.write(f'"{obj_id},\n{obj_name}",\n')
             self.created_files.append(cmodel_path)
 
             # objects.xml
